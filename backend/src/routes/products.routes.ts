@@ -2,6 +2,7 @@ import {Router} from 'express';
 import {getRepository} from 'typeorm';
 import Product from '../models/Product';
 import CreateProduct from '../services/CreateProduct';
+import UpdateProduct from '../services/UpdateProduct';
 
 const productsRouter = Router();
 
@@ -47,6 +48,25 @@ productsRouter.delete('/:id', async (request, response) => {
     //Retorna uma menssagem para o usuario.
     return response.json({message:'Produto deletado com sucesso'});
 
+})
+
+productsRouter.patch('/id', async (request, response) => {
+    //Captura o ID da URL da requisição.
+    const {id} = request.params;
+
+    //Captura as variaveis de dentro da requisição.
+    const {name, description, price, image} = request.body;
+
+    //Chama a classe de atualizar o produto.
+    const updateProduct = new UpdateProduct();
+
+    //Atualiza o produto.
+    await updateProduct.execute({
+        id, name, description, price, image
+    })
+
+    //Retorna uma menssagem para o usuario.
+    return response.json({message:'Produto atualizado com sucesso'});
 })
 
 
