@@ -17,7 +17,7 @@ class CreateProduct{
 
         const productsRepository = getRepository(Product);
 
-        const checkProductExists = productsRepository.findOne({where:name});
+        const checkProductExists = await productsRepository.findOne({where:{name}});
 
         if(checkProductExists){
             throw new Error('Já existe um produto com o nome informado')
