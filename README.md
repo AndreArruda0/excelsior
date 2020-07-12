@@ -9,5 +9,5 @@ Aplicação de loja de roupas, com NodeJS, React e TypeScript, ultilizando banco
 <p>Feito isso é só rodar o comando "yarn typeorm migration:run" e a tabela será criada automaticamente no banco de dados.</p>
 <p>Após concluir todas as etapas anteriores é só rodar "yarn dev" e o backend estará rodando na sua maquina na porta 3333.</p>
 <h3>Frontend</h3>
-<p>Para fazer a instalação do frontend é só acessar a pasta frontend e rodar o comando "yarn install"</p>
+<p>Para fazer a instalação do frontend é só acessar a pasta web e rodar o comando "yarn install"</p>
 <p>Após isso é só rodar "yarn start" e pronto, o front end da aplicação esta rodando em sua maquina na porta 3000</p>
