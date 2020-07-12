@@ -6,6 +6,20 @@ import UpdateProduct from '../services/UpdateProduct';
 
 const productsRouter = Router();
 
+productsRouter.get('/product/:ID', async (request, response) => {
+    //Captura do ID da URL da requisição.
+    const {ID} = request.params;
+
+    //Inicia o repositorio da classe Produto.
+    const productsRepository = getRepository(Product);
+
+    //Procura o registro na tabela com o ID informado.
+    const product = await productsRepository.findOne({where:{ID}})
+
+    //Retorna o produto
+    return response.json(product);
+})
+
 productsRouter.get('/', async (request, response) => {
     //Inicia o repositorio da classe Produto.
     const productsRepository = getRepository(Product);
@@ -50,7 +64,7 @@ productsRouter.delete('/:id', async (request, response) => {
 
 })
 
-productsRouter.patch('/id', async (request, response) => {
+productsRouter.patch('/:id', async (request, response) => {
     //Captura o ID da URL da requisição.
     const {id} = request.params;
 
