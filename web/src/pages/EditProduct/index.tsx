@@ -4,14 +4,13 @@ import Logo from '../../assets/logo2.png';
 import DropZone from 'react-dropzone';
 import api from '../../services/api'
 import {toast} from 'react-toastify';
-import {useHistory, Link, useRouteMatch} from 'react-router-dom';
+import {Link, useRouteMatch} from 'react-router-dom';
 
 interface Params{
     ID:string;
 }
 
 const EditProduct: React.FC = () => {
-    const history = useHistory();
     const [image, setImage] = useState(require('../../assets/empty.jpg'));
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
