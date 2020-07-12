@@ -4,6 +4,7 @@ import Logo from '../../assets/logo2.png';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
+//Cria as tipagens do Produto
 interface Product{
     ID: string;
     name: string;
@@ -12,8 +13,11 @@ interface Product{
 }
 
 const Market: React.FC = () => {
+
+    //Cria uma lista para armazenas os produtos
     const [products, setProducts] = useState<Product[]>([]);
 
+    //Faz a consulta no backend e armazena os produtos na lista.
     useEffect(() => {
         api.get('/products').then(response => setProducts(response.data))
     },[])
