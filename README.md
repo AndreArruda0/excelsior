@@ -1,6 +1,8 @@
 # Excelsior
 Aplicação de loja de roupas, com NodeJS, React e TypeScript, ultilizando banco de dados MySQL.
 <h2>Instalação</h2>
+<h3>Database</h3>
+<p>Após fazer a instalação do MySQL em sua maquina rodar o script "create database excelsior".</p>
 <h3>Backend</h3>
 <p>Para fazer a instalação do projeto voce precisará ter o banco de dados MySQL instalado em sua maquina e alterar as configurações do banco no arquivo backend/ormconfig.json.</p>
 <p>Após isso na pasta backend será necessario rodar o comando "yarn install" para instalar as dependencias do backend da aplicação.</p>
