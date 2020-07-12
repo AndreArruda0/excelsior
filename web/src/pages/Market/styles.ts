@@ -3,7 +3,7 @@ import {shade} from 'polished';
 
 export const Header = styled.div`
     background: #FF002B;
-    height: 264px;
+    height: 200px;
     text-align:center;
 `;
 
@@ -12,7 +12,7 @@ export const LogoS = styled.img`
     background: #FFFFFF;
     border-radius:10px;
     box-shadow: 0px 3px 6px #00000029;
-    margin-top:150px;
+    margin-top:100px;
 `;
 
 export const Products = styled.div`
@@ -64,7 +64,7 @@ export const Products = styled.div`
 export const Admin = styled.button`
     position: absolute;
     right:0;
-    margin-top:280px;
+    margin-top:210px;
     margin-right:12px;
     background:#FF0000;
     border:0px;

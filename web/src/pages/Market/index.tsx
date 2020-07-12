@@ -1,13 +1,14 @@
 import React from 'react';
 import {Header, LogoS, Products, Admin} from './styles';
 import Logo from '../../assets/logo2.png';
+import { Link } from 'react-router-dom';
 
 const Market: React.FC = () => {
     return (
         <>
             <Header>
                 <LogoS src={Logo} alt="Logo" />
-                <Admin>Admin</Admin>
+                <Link to="/admin"><Admin>Admin</Admin></Link>
             </Header>
             <Products>
                 <div className="product">
