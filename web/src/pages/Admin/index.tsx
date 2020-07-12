@@ -1,6 +1,7 @@
 import React from 'react';
-import {Header, LogoS, Container, Options, Btn} from './styles';
+import {Header, LogoS, Container, Options, Btn, Product} from './styles';
 import Logo from '../../assets/logo2.png';
+import {Link} from 'react-router-dom';
 
 const Admin: React.FC = () => {
     return (
@@ -10,9 +11,15 @@ const Admin: React.FC = () => {
         </Header>
         <Container>
             <Options>
-                <Btn>Voltar</Btn>
-                <Btn>Novo Produto</Btn>
+                <Link to="/"><Btn>Voltar</Btn></Link>
+                <Link to="/newProduct"><Btn>Novo Produto</Btn></Link>
             </Options>
+            <Product>
+                a
+            </Product>
+            <Product>
+                a
+            </Product>
         </Container>
     </>
     )

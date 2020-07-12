@@ -34,23 +34,32 @@ export const Btn = styled.button`
     border-radius:10px;
     margin-left:12px;
     transition: background-color 0.2s;
+    margin-top:12px;
 
     &:hover{
         background: ${shade(0.3, '#FF0000')};
     }
 `;
 
-export const Product = styled.div`
+export const DropContainer = styled.div`
+    border-radius:50%;
+    width: 226px;
+    height: 218px;
     margin-top:12px;
-    box-shadow: 0px 3px 6px #00000029;
-    border:1px solid #00000029;
-    width:1000px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    transition:transform 0.2s;
+`;
 
-    &:hover{
-        transform: scale(1.1);
-    }
+export const Photo = styled.img`
+    width: 226px;
+    height: 218px;
+    box-shadow: 0px 3px 6px #00000029;
+`;
+
+export const Input = styled.input`
+    margin-top:12px;
+    border:0px;
+    background:#CCCCCC;
+    height:40px;
+    width:500px;
+    border-radius:10px;
+    padding-left:12px;
 `;
